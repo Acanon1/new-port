@@ -1,14 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import SideBarComponent from './AppInstagram/Sidebar/SideBarComponent';
+import Inicio from './AppInstagram/Inicio';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <SideBarComponent/>
+    <BrowserRouter>
+      <Routes>
+        <Route path='inicio' element={<Inicio/>}/>
+        <Route path='side' element={<SideBarComponent/>}/>
+
+
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
